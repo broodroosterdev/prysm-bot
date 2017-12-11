@@ -5,8 +5,6 @@ const Enmap = require('enmap')
 module.exports = (client, message) => {
     client.SettingsTable = client.settings.get(message.guild.id);
     client.OwnerId = message.guild.ownerID
-    client.LogChannel = message.guild.channels.find("name", client.SettingsTable.modLogChannel)
-    //client.Admins = message.guild.members.roles.find("name", SettingsTable.Admins).members
 
     var prefix = client.SettingsTable.prefix
     if(message.author.equals(client.user)) return;

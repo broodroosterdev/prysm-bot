@@ -23,7 +23,6 @@ module.exports = (client, message, args) => {
 
     await getimage()
         var filepath = pics[Math.floor(Math.random() * pics.length)]
-        console.log(filepath)
         var image = new Discord.Attachment(`./ayylmao/${filepath}`, "ayy-lmao.jpg")
         msg.delete()
         message.channel.send(`Ayy lmao`, image)
