@@ -60,4 +60,4 @@ typings/
 #config files
 config.json
 #database files
-data
+/data
