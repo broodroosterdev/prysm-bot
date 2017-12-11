@@ -1,0 +1,19 @@
+{
+  "name": "prysm",
+  "version": "1.0.0",
+  "description": "Prysm-bot is the only bot you will ever need.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "broodrooster",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "enmap": "^0.4.2",
+    "enmap-level": "^1.0.0",
+    "jimp": "^0.2.28",
+    "moment": "^2.19.1",
+    "snekfetch": "^3.5.3"
+  }
+}
