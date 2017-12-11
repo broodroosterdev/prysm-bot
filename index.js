@@ -51,7 +51,6 @@ const evtFiles = await readdir("./events/");
         const event = require(`./events/${file}`)
         client.on(evtName, event.bind(null, client))
         delete require.cache[require.resolve(`./events/${file}`)];
-        console.log(evtName)
 })
 };
 
