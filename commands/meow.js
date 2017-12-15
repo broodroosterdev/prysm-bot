@@ -3,7 +3,7 @@ const fs = require('fs');
 const Jimp = require('jimp');
 const Enmap = require('enmap');
 const snekfetch = require('snekfetch')
-module.exports = async (client, message, args) => {
+module.exports.run = async (client, message, args) => {
     const SettingsTable = client.settings.get(message.guild.id);
     message.channel.send("Loading...").then(msg => {
     snekfetch.get("http://random.cat/meow").then(webpage => {

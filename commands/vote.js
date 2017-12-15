@@ -3,7 +3,7 @@ const fs = require('fs');
 const Jimp = require('jimp');
 const Enmap = require('enmap');
 const snekfetch = require('snekfetch')
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     const SettingsTable = client.settings.get(message.guild.id);
     message.channel.send("Please provide a question for the vote. I will abort after 30 seconds so you better be quick!").then(msg => {
     const collector = message.channel.createMessageCollector(m => m.author.id === message.author.id && m.channel.id === message.channel.id, {time : 30000});

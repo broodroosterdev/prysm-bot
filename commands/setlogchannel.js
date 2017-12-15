@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require('fs')
 const Jimp = require('jimp')
 const Enmap = require('enmap')
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     const SettingsTable = client.settings.get(message.guild.id);
     var channel = message.content.slice(SettingsTable.prefix.length + 15)
     const ModRole = message.guild.roles.find("name", SettingsTable.modRole)

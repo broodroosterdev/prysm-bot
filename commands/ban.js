@@ -4,7 +4,7 @@ const Jimp = require('jimp')
 const Enmap = require('enmap')
 const snekfetch = require('snekfetch')
 const moment = require('moment');
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     const SettingsTable = client.settings.get(message.guild.id);
     const ModRole = message.guild.roles.find("name", SettingsTable.modRole)
     if(ModRole === null) {

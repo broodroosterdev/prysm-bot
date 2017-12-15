@@ -3,7 +3,7 @@ const fs = require('fs');
 const Jimp = require('jimp');
 const Enmap = require('enmap');
 const snekfetch = require('snekfetch')
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     const SettingsTable = client.settings.get(message.guild.id);
     searchterm = message.content.slice(SettingsTable.prefix.length + 8).split(",");
     message.channel.send("Loading...").then(msg => {

@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require('fs')
 const Jimp = require('jimp')
 const Enmap = require('enmap')
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     const SettingsTable = client.settings.get(message.guild.id);
     var args = message.content.substring(SettingsTable.prefix.length + 5).split(/ +/g)
     if(message.author.id !== '236794128334061568') {

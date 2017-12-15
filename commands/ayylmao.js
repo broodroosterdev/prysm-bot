@@ -5,7 +5,7 @@ const Enmap = require('enmap')
 const snekfetch = require('snekfetch')
 const moment = require('moment');
 
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     const { promisify } = require("util");
     const readdir = promisify(fs.readdir);
     const SettingsTable = client.settings.get(message.guild.id);

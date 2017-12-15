@@ -4,7 +4,7 @@ const Jimp = require('jimp')
 const Enmap = require('enmap')
 const snekfetch = require('snekfetch')
 const moment = require('moment');
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     var steamids = "7656119796043553"
     const SettingsTable = client.settings.get(message.guild.id);
     steamid = message.content.slice(SettingsTable.prefix.length + 11)

@@ -4,13 +4,12 @@ const Jimp = require('jimp')
 const Enmap = require('enmap')
 const snekfetch = require('snekfetch')
 const moment = require('moment');
-module.exports = (client, message, args) => {
-    const SettingsTable = client.settings.get(message.guild.id);
+module.exports.run = (client, message, args) => {
     message.channel.send("Loading...").then(msg => {
     var embed = new Discord.RichEmbed()
     .setColor(0x000000)
     .setAuthor(client.user.username, client.user.avatarURL)
-    .setDescription(`Commands\nCommands can be used in the form of ${SettingsTable.prefix} (Command)\nWhen a command is not available Prysm will react with: ❌`)
+    .setDescription(`Commands\nCommands can be used in the form of ${client.SettingsTable.prefix} (Command)\nWhen a command is not available Prysm will react with: ❌`)
     .addField("----Setup----", "To adjust Prysm to your liking")
     .addField("***setlogchannel***", "Sets the default channel where Prysm will dump its logs. For more info use the command: help-setlogchannel")
     .addField("***setmodrole***", "Sets the role which gives users acces to mod-commands. For more info use the command: help-setmodrole")

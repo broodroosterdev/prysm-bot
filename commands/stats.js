@@ -4,7 +4,7 @@ const Jimp = require('jimp')
 const Enmap = require('enmap')
 const snekfetch = require('snekfetch')
 const moment = require('moment');
-module.exports = (client, message, args) => {
+module.exports.run = (client, message, args) => {
     const SettingsTable = client.settings.get(message.guild.id);
     message.channel.send("Loading...").then(msg => {
     const usedmem = process.memoryUsage().heapUsed / 1024 / 1024;
