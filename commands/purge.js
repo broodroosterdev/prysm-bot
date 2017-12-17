@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
     const amount =  parseInt(message.content.slice(SettingsTable.prefix.length + 6)) + 2
     if (!amount) return message.reply('Must specify an amount to delete!');
     message.channel.fetchMessages({
-      limit: amount,
+      limit: amount
     }).then(messages => {
       message.channel.bulkDelete(messages).catch(error => console.log(error.stack));
       message.channel.send(`Deleted ${amount - 2} messages for you!`).then(msg => {
